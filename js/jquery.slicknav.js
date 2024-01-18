@@ -1,9 +1,4 @@
-/*!
- * SlickNav Responsive Mobile Menu v1.0.10
- * (c) 2016 Josh Cope
- * licensed under MIT
- */
-;(function ($, document, window) {
+(function ($, document, window) {
     var
     // default settings object.
         defaults = {
@@ -49,10 +44,10 @@
     function Plugin(element, options) {
         this.element = element;
 
-        // jQuery has an extend method which merges the contents of two or
-        // more objects, storing the result in the first object. The first object
-        // is generally empty as we don't want to alter the default options for
-        // future instances of the plugin
+        // jQuery tiene un método extend que fusiona el contenido de dos o
+         // más objetos, almacenando el resultado en el primer objeto. El primer objeto
+         // generalmente está vacío ya que no queremos alterar las opciones predeterminadas para
+         // instancias futuras del complemento
         this.settings = $.extend({}, defaults, options);
 
         // Don't remove IDs by default if duplicate is false
@@ -73,14 +68,14 @@
             iconClass,
             menuBar;
 
-        // clone menu if needed
+        // clonalo si lo necesitas
         if (settings.duplicate) {
             $this.mobileNav = menu.clone();
         } else {
             $this.mobileNav = menu;
         }
 
-        // remove IDs if set
+        // remueve los ids si estan setteados 
         if (settings.removeIds) {
           $this.mobileNav.removeAttr('id');
           $this.mobileNav.find('*').each(function (i, e) {
@@ -88,7 +83,7 @@
           });
         }
 
-        // remove classes if set
+        // remueve si estan seteados 
         if (settings.removeClasses) {
             $this.mobileNav.removeAttr('class');
             $this.mobileNav.find('*').each(function (i, e) {
@@ -96,7 +91,7 @@
             });
         }
 
-        // remove styles if set
+        // remueve estilos si esta seteado 
         if (settings.removeStyles) {
             $this.mobileNav.removeAttr('style');
             $this.mobileNav.find('*').each(function (i, e) {
@@ -104,7 +99,7 @@
             });
         }
 
-        // styling class for the button
+        // estilo al botton 
         iconClass = prefix + '_icon';
 
         if (settings.label === '') {
@@ -115,7 +110,7 @@
             settings.parentTag = 'a href="#"';
         }
 
-        // create menu bar
+        // crea la barra de menu 
         $this.mobileNav.attr('class', prefix + '_nav');
         menuBar = $('<div class="' + prefix + '_menu"></div>');
 		if (settings.brand !== '') {
@@ -141,7 +136,7 @@
         }
         menuBar.append($this.mobileNav);
 
-        // iterate over structure adding additional structure
+        // itera estructuras
         var items = $this.mobileNav.find('li');
         $(items).each(function () {
             var item = $(this),
@@ -149,11 +144,9 @@
             data.children = item.children('ul').attr('role', 'menu');
             item.data('menu', data);
 
-            // if a list item has a nested menu
+            //si la lista tiene un menu dentro
             if (data.children.length > 0) {
 
-                // select all text before the child menu
-                // check for anchors
 
                 var a = item.contents(),
                     containsAnchor = false,
