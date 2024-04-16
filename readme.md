@@ -23,3 +23,8 @@ However, as the years have gone by, I have become a very curious person, especia
 - My website: ...
 - Email: martinlopezunt@gmail.com
 - Linkedin: https://www.linkedin.com/in/martin-alejandro-lopez-19795b101/
+
+
+
+
+Debo mencionar que el codigo implementado y el diseño de este porfolio no es de mi autoria.
